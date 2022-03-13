@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+  <title>Kasm a workspace for the people | mellonaut</title>
+  <meta charset='utf-8'>
+  <meta name="viewport" content ="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+  
+  
+<meta name="keywords" content="mellonaut">
+<meta property="og:locale" content='en_US'>
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kasm - A Workspace for the People">
+<meta property="og:description" content="&ldquo;Nah, you can&rsquo;t install that.&rdquo; Kasm is really cool. It’s based on Docker and allows you to to stream workspaces over the web like guacomole.">
+<meta property="og:url" content="https://sludge.one/post/kasm/">
+<meta property="og:image" content="https://sludgeassets-sync.s3.us-east-1.amazonaws.com/assets/headers/kasm_door_large.png">
+<link rel="canonical" href="https://sludge.one/post/kasm/">
+<link rel="apple-touch-icon" sizes="180x180" href='https://sludge.one/images/icons/apple-touch-icon.png'>
+<link rel="icon" type="image/png" sizes="32x32" href='https://sludge.one/images/icons/favicon-32x32.png'>
+<link rel="icon" type="image/png" sizes='16x16' href='https://sludge.one/images/icons/favicon-16x16.png'>
+<link rel="manifest" href='https://sludge.one/images/icons/site.webmanifest'>
+
+<link rel="stylesheet" href="https://sludge.one/css/styles.86c6da248e485cdc7f340baeb04c29cf0499e12a33a387104028f046c1d4ba15aa3ef8a4bf8f44a2fba7f0263053fa54dc4d2f2baa3d6c8ebb3c69f7bdbded2b.css" integrity="sha512-hsbaJI5IXNx/NAuusEwpzwSZ4Sozo4cQQCjwRsHUuhWqPvikv49Eovun8CYwU/pU3E0vK6o9bI67PGn3vb3tKw==">
+</head>
+
+  <body>
+    <div class="nav-drop">
+  <div class="nav-body">
+    <div class="nav-close"></div><div class="color_mode">
+<label for="mode">Toggle Dark Mode</label>
+<input type="checkbox" class="color_choice" id="mode">
+</div>
+
+  </div>
+</div>
+<header class="nav">
+  <nav class="nav-menu">
+    <a href="https://sludge.one/" class="nav-brand nav_item">mellonaut</a>
+    <div class="nav_bar-wrap">
+      <div class="nav_bar"></div>
+    </div>
+  </nav>
+</header>
+
+
+    <main>
+      
+  <div class="wrap mt post">
+    <div><p class="post_date">20. February 2022</p>
+      <h1 class="post_title">Kasm - A Workspace for the People</h1>
+      <div class="post_body">
+        <div class="post_inner">
+        
+          
+          
+          <img src="https://sludgeassets-sync.s3.us-east-1.amazonaws.com/assets/headers/kasm_door_large.png" alt="https://sludgeassets-sync.s3.us-east-1.amazonaws.com/assets/headers/kasm_door_large.png" class="post_thumbnail">
+        
+          <hr>
+<h1 id="nah-you-cant-install-that">&ldquo;Nah, you can&rsquo;t install that.&rdquo;</h1>
+<p>Kasm is really cool. It’s based on Docker and allows you to to stream workspaces over the web like guacomole. You can manage users and groups, custom images, different types of authentication…it&rsquo;s pretty robust.</p>
+<p>Let&rsquo;s take a look at what it&rsquo;s doing. In Portainer we can see it’s a distributed system of containers that reminds me of kubernetes.</p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm01.png" alt="N|Solid"></a></p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm02.png" alt="N|Solid"></a></p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm03.png" alt="N|Solid"></a></p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm04.png" alt="N|Solid"></a></p>
+<p>Let&rsquo;s make ourselves an admin account. We create the account, set the password, go to groups, view the group from the …</p>
+<p>Click add user and add your newly made account to admin</p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm05.png" alt="N|Solid"></a></p>
+<p>If you&rsquo;re using a hypervisor, now&rsquo;s a good place to take a snapshot in case we break something.</p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm06.png" alt="N|Solid"></a></p>
+<p>Run doom on anything:</p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm07.png" alt="N|Solid"></a></p>
+<p>Over on Portainer you can see the doom container is now running with a randomly generated name:</p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm08.png" alt="N|Solid"></a></p>
+<p>With Vulhub Lab running:</p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm09.png" alt="N|Solid"></a></p>
+<p>I think I&rsquo;n going to put Kasm up as part of my ansible terraform thing. I&rsquo;m looking ath this role:</p>
+<p><a href="https://github.com/MonolithProjects/ansible-kasm_server">https://github.com/MonolithProjects/ansible-kasm_server</a></p>
+<p>Put the files for the roles in a folder in roles…would you believe it.</p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm10.png" alt="N|Solid"></a></p>
+<p>Proof!</p>
+<p>But then I read further…</p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm11.png" alt="N|Solid"></a></p>
+<p>Lets drop the tar file in there and do it like they want'</p>
+<p>Lots of errors, kind o got swept up:</p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm12.png" alt="N|Solid"></a></p>
+<p>I had to remove all of these &ldquo;set -o pipefails&rdquo;</p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm13.png" alt="N|Solid"></a></p>
+<p>It was in the shell command section of the  &lsquo;install-kasnm.yml&rsquo; and &lsquo;kasm-state&rsquo;. I also had to clear a couple of space issues with files in here as well, but cant remember which specifically. Now that Its cleaned up, the issue is that</p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm14.png" alt="N|Solid"></a></p>
+<p>I need to figure out what&rsquo;s going on, what&rsquo;s already listening on that port. Or how to put it on another, either one. It has to be traefik. We may not need that one for this VM. Letsnuke the whole VM. We&rsquo;ll spin it back up and not install traefik see what we get</p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm15.png" alt="N|Solid"></a></p>
+<p>That seems to be working. The kasm install takes forever and a day from what I remember, but its past there and running smoothly. I found what we need to do, tough.</p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm16.png" alt="N|Solid"></a></p>
+<p>In the install.sh script in files. We can change this. We may need to actually package it that way in the tar file, since we have kasm unpacking it. We should be able to do that a different way but going to start there when we need to.</p>
+<p>Not sure how we edit galaxy roles, SO Im going to take the role from github and edit it locally:</p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm17.png" alt="N|Solid"></a></p>
+<p>Renamed it to fit my ansible- convention for stuff grabbed from galaxy</p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm18.png" alt="N|Solid"></a></p>
+<p>See what happens if we edit this main.yml inside the role to bind host port 4443 to container 4443</p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm19.png" alt="N|Solid"></a></p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm20.png" alt="N|Solid"></a></p>
+<p>I said &ldquo;that&rsquo;s what&rsquo;s up&rdquo; when I saw this. We&rsquo;re good. Except…man, traefik is supposed to be the https proxy. I think we&rsquo;re going to have issues down the road. I think we&rsquo;re going to have to try messing with the default Kasm port. We should be able to make this work</p>
+<p>I pushed the kasm branch to github, started a new one for Vault. Im just curious to see how easy this is or if its…let&rsquo;s go.</p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm21.png" alt="N|Solid"></a></p>
+<p>Not that easy..</p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm22.png" alt="N|Solid"></a></p>
+<p>&ldquo;msg&rdquo;: &ldquo;Failed to find handler for &quot;/home/earth/.ansible/tmp/ansible-tmp-1645295712.3930306-3460-2141914855678/source&quot;. Make sure the required command to extract the file is installed. Command &quot;/usr/bin/tar&quot; could not handle archive. Unable to find required &lsquo;unzip&rsquo; or &lsquo;zipinfo&rsquo; binary in the path.&rdquo;</p>
+<p>Look that up later.</p>
+<p>Started another bracnh probably stupidly off of Vault. But what we did for Vault was simple, if we have to roll back before that that&rsquo;s okay. Im trying to get Cloudflare dns working</p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm23.png" alt="N|Solid"></a></p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm24.png" alt="N|Solid"></a></p>
+<p>Ill take it. We just need to figure out how to pull that IP in and we&rsquo;re there. Everything else went smooth enough.</p>
+<p>Well, it should be a damn CNAME, so..</p>
+<p><a href="https://sludge.one/kasm"><img src="../../kasm/kasm25.png" alt="N|Solid"></a></p>
+<p>Hmm. New error.</p>
+<p>Went through and checked for sensitive info since I was running with secrets the wrong way. You know, development style.  So I&rsquo;m trashing the instance, I&rsquo;m commenting out all the cloudflare stuff to come back to ater I finish vault. Push the code.</p>
+<p>You know what? We did it dumb, but not the good dumb. So we should just take sludge.one away from Cloudflare and add it to AWS as a custom domain. That&rsquo;ll make it cleaner to spin up with the VM, and then I think we can do something so we can terraform a CNAME on Cloudflare. Hell, a whole proxy network behind cloudflare, we could use c2.sbs on here as well I&rsquo;d imagine. Planning to do that with CDNs anyway.</p>
+
+        </div>
+        <div class="post_extra mb-2">
+          
+<div class="copy" data-before="Share Story" data-after="Link Copied">
+  <svg class="icon">
+    <use xlink:href="#copy"></use>
+  </svg>
+</div>
+        </div>
+        <div>
+        
+        </div>
+      </div>
+    </div>
+    <a href="https://sludge.one/" class="post_nav"><span class="post_next">The Latest 
+      <svg class="icon icon_scale">
+        <use xlink:href="#double-arrow"></use>
+      </svg>
+    </span></a>
+  </div>
+
+    </main>
+    <footer class="footer wrap pale">
+  <p>&copy;&nbsp;<span class="year"></span>&nbsp;mellonaut</p>
+  <p class="attribution upcase">Designed by  <a href = '<no value>' target = '_blank' title = 'Linkedin Profile' rel = 'nonopener'><no value></a></p>
+</footer>
+
+
+<script src="https://sludge.one/js/index.min.4c267143e8a3510f2985dbce99f7612fae4605006c50b925325ea27d059bf1e87b9ec14835c52236bc9152e4858ade83bf3380784d5de2586bc1a76156a6fbc1.js"></script>
+
+    <svg width="0" height="0" class="hidden">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 699.428 699.428" id="copy">
+    <path d="M502.714 0H240.428C194.178 0 153 42.425 153 87.429l-25.267.59c-46.228 0-84.019 41.834-84.019 86.838V612c0 45.004 41.179 87.428 87.429 87.428H459c46.249 0 87.428-42.424 87.428-87.428h21.857c46.25 0 87.429-42.424 87.429-87.428v-349.19L502.714 0zM459 655.715H131.143c-22.95 0-43.714-21.441-43.714-43.715V174.857c0-22.272 18.688-42.993 41.638-42.993l23.933-.721v393.429C153 569.576 194.178 612 240.428 612h262.286c0 22.273-20.765 43.715-43.714 43.715zm153-131.143c0 22.271-20.765 43.713-43.715 43.713H240.428c-22.95 0-43.714-21.441-43.714-43.713V87.429c0-22.272 20.764-43.714 43.714-43.714H459c-.351 50.337 0 87.975 0 87.975 0 45.419 40.872 86.882 87.428 86.882H612v306zm-65.572-349.715c-23.277 0-43.714-42.293-43.714-64.981V44.348L612 174.857h-65.572zm-43.714 131.537H306c-12.065 0-21.857 9.77-21.857 21.835 0 12.065 9.792 21.835 21.857 21.835h196.714c12.065 0 21.857-9.771 21.857-21.835 0-12.065-9.792-21.835-21.857-21.835zm0 109.176H306c-12.065 0-21.857 9.77-21.857 21.834 0 12.066 9.792 21.836 21.857 21.836h196.714c12.065 0 21.857-9.77 21.857-21.836 0-12.064-9.792-21.834-21.857-21.834z"></path>
+  </symbol>
+  <symbol viewBox="0 0 53 42" xmlns="http://www.w3.org/2000/svg" id="double-arrow">
+    <path d="M.595 39.653a1.318 1.318 0 0 1 0-1.864L16.55 21.833a1.318 1.318 0 0 0 0-1.863L.595 4.014a1.318 1.318 0 0 1 0-1.863L2.125.62a1.318 1.318 0 0 1 1.864 0l19.35 19.349a1.318 1.318 0 0 1 0 1.863l-19.35 19.35a1.318 1.318 0 0 1-1.863 0zm29 0a1.318 1.318 0 0 1 0-1.864L45.55 21.833a1.318 1.318 0 0 0 0-1.863L29.595 4.014a1.318 1.318 0 0 1 0-1.863l1.53-1.53a1.318 1.318 0 0 1 1.864 0l19.35 19.349a1.318 1.318 0 0 1 0 1.863l-19.35 19.35a1.318 1.318 0 0 1-1.863 0z"></path>
+  </symbol>
+</svg>
+  </body>
+</html>

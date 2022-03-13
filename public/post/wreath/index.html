@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+  <title>Wreath network | mellonaut</title>
+  <meta charset='utf-8'>
+  <meta name="viewport" content ="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+  
+  
+<meta name="keywords" content="mellonaut">
+<meta property="og:locale" content='en_US'>
+<meta property="og:type" content="article">
+<meta property="og:title" content="Wreath - Network">
+<meta property="og:description" content="Going after it again.
+Running Gobuster with the wildcard switch and raft-small-directories-lowercase.txt Running feroxbuster Noticed in the scan that Gobuster">
+<meta property="og:url" content="https://sludge.one/post/wreath/">
+<meta property="og:image" content="https://sludgeassets-sync.s3.us-east-1.amazonaws.com/assets/headers/wp2759865-satanic-symbols-wallpaper.gif">
+<link rel="canonical" href="https://sludge.one/post/wreath/">
+<link rel="apple-touch-icon" sizes="180x180" href='https://sludge.one/images/icons/apple-touch-icon.png'>
+<link rel="icon" type="image/png" sizes="32x32" href='https://sludge.one/images/icons/favicon-32x32.png'>
+<link rel="icon" type="image/png" sizes='16x16' href='https://sludge.one/images/icons/favicon-16x16.png'>
+<link rel="manifest" href='https://sludge.one/images/icons/site.webmanifest'>
+
+<link rel="stylesheet" href="https://sludge.one/css/styles.86c6da248e485cdc7f340baeb04c29cf0499e12a33a387104028f046c1d4ba15aa3ef8a4bf8f44a2fba7f0263053fa54dc4d2f2baa3d6c8ebb3c69f7bdbded2b.css" integrity="sha512-hsbaJI5IXNx/NAuusEwpzwSZ4Sozo4cQQCjwRsHUuhWqPvikv49Eovun8CYwU/pU3E0vK6o9bI67PGn3vb3tKw==">
+</head>
+
+  <body>
+    <div class="nav-drop">
+  <div class="nav-body">
+    <div class="nav-close"></div><div class="color_mode">
+<label for="mode">Toggle Dark Mode</label>
+<input type="checkbox" class="color_choice" id="mode">
+</div>
+
+  </div>
+</div>
+<header class="nav">
+  <nav class="nav-menu">
+    <a href="https://sludge.one/" class="nav-brand nav_item">mellonaut</a>
+    <div class="nav_bar-wrap">
+      <div class="nav_bar"></div>
+    </div>
+  </nav>
+</header>
+
+
+    <main>
+      
+  <div class="wrap mt post">
+    <div><p class="post_date">05. February 2022</p>
+      <h1 class="post_title">Wreath - Network</h1>
+      <div class="post_body">
+        <div class="post_inner">
+        
+          
+          
+          <img src="https://sludgeassets-sync.s3.us-east-1.amazonaws.com/assets/headers/wp2759865-satanic-symbols-wallpaper.gif" alt="https://sludgeassets-sync.s3.us-east-1.amazonaws.com/assets/headers/wp2759865-satanic-symbols-wallpaper.gif" class="post_thumbnail">
+        
+          <hr>
+<!-- raw HTML omitted -->
+<p>Going after it again.</p>
+<p>Running Gobuster with the wildcard switch and raft-small-directories-lowercase.txt
+Running feroxbuster
+Noticed in the scan that Gobuster resolved the IP to thomaswreath.thm. going there now in firefox/burp</p>
+<p>Had to add the host name I found into the hosts file on windows. Wouldn’t work on linux, I thionk that Id need to directly VPN into the wreath net with the wsl distro itself to get the host name working there</p>
+<p><a href="mailto:me@thomaswreath.thm">me@thomaswreath.thm</a></p>
+<p>Not seeing much else on the page itself. Going to go back to the terminal and the scans see what we can see. Maybe start a scan of the subnet just to see</p>
+<p>Looking at</p>
+<p>10000/tcp open   http       MiniServ 1.890 (Webmin httpd)</p>
+<p><a href="https://github.com/squid22/Webmin_CVE-2019-15107">https://github.com/squid22/Webmin_CVE-2019-15107</a></p>
+<p><a href="https://sludge.one/wreath"><img src="../../wreath/wreath01.png" alt="N|Solid"></a></p>
+<p><a href="https://sludge.one/wreath"><img src="../../wreath/wreath02.png" alt="N|Solid"></a></p>
+<p>That worked swimmingly.</p>
+<p>Now I need to escalate priv I guess. I need to start poking around for passwords keys or suid bits set.</p>
+<p>Well, found this private ssh key called  called reverse in the home dir:</p>
+<pre tabindex="0"><code>-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABCC6tc3VA
+qmIVzoZS4wJvxMAAAAEAAAAAEAAAGXAAAAB3NzaC1yc2EAAAADAQABAAABgQDAj2K73biF
+OYJBiFglYwWQf3tiDK5P2ZF6NoEaRH8WMb0SDBcAW5YNjozMQ8qOQxna5hj0mK8eGPc5jj
+KjrMsq5z60nDA5l2W6vnYU6gu7bXpfVM5Nx0uTVCE72nw+gKMoGANYgq92gn6Yf9T6LCHP
+L2TUYpngMYD+8ML3Ke+CgJNSAM/jSFXF53cURZgXKqdq98bWLwvM9w0MPtpjKV5IJyEfRM
+/0CigJPCjPduzmvLTIUyz59h5RbswnAfKhFvSghFZfqLGsehx10/pHxezBiLPyWXFr7xYa
+4GbkHH5qWo1NuvnECEJfDnU/5lPV4gGri92466vSZkbrl5P8pVygoGsdCCEwFEGLmBXwlP
+6b+sHg9pTrAU2oyHZZ/lJ7JGf4Ma09XAUQScaTYC418vt+EYRQOqGW2R+ZYHbIXAeeKKaf
+aYitglxvFXgikYdsqCdthR9EMUlrcXS8W0P2UaK1K6ybGw+A2bOO12zzTe3kDjenqkuq36
+pi1VDm1OgSmeUAAAWQYZHWST9P7ZZz9kJ8PNDJGK19Z1BtG8IZbCLy3mcWUwjZqP88ieiG
+g0z8tz8tjUJcI1BAifm7h+b/g2PJr55LBrF+y8e1sQ1hLwo79Sa6ionIsaFiTWu3+5jCAD
+oOHSwsuY+rUwJZt9GTx6Cuk8UNIpYIkZ6Lfz2e9Wy7v5AJTLfeVs9lfA6BbbBG1y8DHkT8
+gUp9ox36RNAT8abjgjBR5v+0kb5UOujRNvyhsq9rwp7ljKUQOCFRZ0JKCa9xUNQsaKGYP5
+ZsVFSlkDH3zV4EKuV1k2EFqBeSYjrxzvV4wQcwIMJGozCTXmQk5LPL64BNvZRTIM2V4N+m
+sbUndD2w1y1VV9s5egkpox1Mma4Iii76UWojqXFLq7HjNAgAO52jT5CSTqu+ex+A61aJZt
+SpA8qfQaOhDBz79VUEbGspI+4vROSKffpYEIIrcdV4r8/m5PwwTtnFaAtRwXJ5/PJ1zkFa
+JzLK3o1H5OMcRneY9R7xbwr2txb1B37LCUN3M9UEw3WWI/v1lqbir0C1SWjMklpciO83P9
+xqa0Siph3yJG+6VnYywI5Yct9OFr29lmiC7pNtfP18pl51e31h991x+2kxTUmI13HPjp0/
+N8piRZ9ZXsYAGeSQaTz6mKF1B6xngBeinie/K/jDj+oNodzh4h9ftWafLMh1adP4mwcKp/
+68I2TPNzL56Q0Jy1NKcEmM+xlQ2acfpYx1paPbEKolysOiFhWozE9RhmgxKAJvsfdAaQmZ
+BdzP5jpTYJz1nuBQpRIqem4eH4Gn+834W/u2S/dlMdHZL4V2WqDbFtf7Vp/L62UR48o87G
+/G0c14x+31TzwZs6XfsgHTnK0ylHXjRnk16eciywFl3d/SZMOsMw2PbZ9NUJoD/UC2SHFh
+O3MmhyGnYYpUykmHja2sU7EG1v7MzobGj2deA1gbQj7/bxbuqhKiq3TSVuF8aZj/CyUMoG
+WXbSg3BSSROPQt/GnvXWE/NlhY6qpB1nQxon2mqMUmsuGPhXT851TRNovu3RmZxTVAPuFW
+ulD/Kj8zbFkTZx8HmePJ5VzxpNW+06ONkeQG5tAn8wuf0M01Gx9cREX+Kq2L7c5wshj4km
+VRUBZv+edw4Q8WUPTDeivjybRdOPTKyVeYOmXHNriZ8lsZzi0jgmjl7gJgZQqfQl/22wke
+yT425Mt5vzktSgp53WowoH86jgjSU9Zl8/PTc8bEkkBQThO6xpIWDNXi9CyhDMIhhBCxO3
+ZWVhYj15hGjvRgwH3UHCOjLDMjxi3r8bGAKGfRbx+PMGSH4jZGHoXSFnQjRUyUlntbNteN
+Z3Wfo4T+f+PFUbDNOa6f1SdFvBmKZOA0Kavz9INTo2ymCbrjuM/kTpt+5ljwCV9xHxYEwS
+jNYcByuLSvKR62iaDi2gi30SByyBHUKodw+0ltNqvYZpuY/vfETRBuPtAzoDSnHIjscN5T
+pERzP06c3gBRZU+kiufp0U/D2f/JYmRMfD26CRVHnfEnMfQfS2VJIgLfDHSaZWWxepEaDK
++08kif5BIS/hwHXk/ffR9sfa7HIy1UEAZ283TmEn/khybT1Kt584Z2lGIUHJUbAvfEsnD9
+SOJqW4BZu27F8gUiWwYba685V4mhkTK/zIoxpFJrDF++PUilgoIDIbfwEDXbkGcIJIL7wf
+ICVHPrjxChee2UWqQK8bPQqYAme1sPynqEFnfjkcJyLx4aArbPZ+V8WTsXIdRiRtnnbEaw
+pj2pUOfnOSLRNpROzn9dGmEY7x2tlftMrfDv5avCOJzt9FkFPyiIFDVu8xMYRnsETNphf1
+ufbJWsc7jb6WYjPIjhx4MPGcE7tbuJvLtY7YUEkJqwkaFDboZIjxk+aaOHpmt3dehtveam
+qmV8AF1zpgrMLGXDnZiG1Bhct3k=
+-----END OPENSSH PRIVATE KEY-----
+</code></pre><p>Why is it called reverse? Is this the private key for this server? How do I check?</p>
+<p>This is anaconda-ks.cfg and has interesting bits for sure</p>
+<pre tabindex="0"><code>sh-4.4# cat anaconda-ks.cfg
+cat anaconda-ks.cfg
+#version=RHEL8
+ignoredisk --only-use=sda
+autopart --type=lvm
+# Partition clearing information
+clearpart --none --initlabel
+# Use graphical install
+graphical
+# Use CDROM installation media
+cdrom
+# Keyboard layouts
+keyboard --vckeymap=gb --xlayouts='gb'
+# System language
+lang en_GB.UTF-8
+
+# Network information
+network  --bootproto=dhcp --device=ens33 --ipv6=auto --activate
+network  --hostname=tm-prod-serv
+repo --name=&quot;Minimal&quot; --baseurl=file:///run/install/repo/Minimal
+# Root password
+rootpw --iscrypted $6$i9vT8tk3SoXXxK2P$HDIAwho9FOdd4QCecIJKwAwwh8Hwl.BdsbMOUAd3X/chSCvrmpfy.5lrLgnRVNq6/6g0PxK9VqSdy47/qKXad1
+# Run the Setup Agent on first boot
+firstboot --enable
+# Do not configure the X Window System
+skipx
+# System services
+services --disabled=&quot;chronyd&quot;
+# System timezone
+timezone Europe/London --isUtc --nontp
+user --name=twreath --password=$6$0my5n311RD7EiK3J$zVFV3WAPCm/dBxzz0a7uDwbQenLohKiunjlDonkqx1huhjmFYZe0RmCPsHmW3OnWYwf8RWPdXAdbtYpkJCReg. --iscrypted --gecos=&quot;Thomas Wreath&quot;
+
+%packages
+@^server-product-environment
+kexec-tools
+
+%end
+
+%addon com_redhat_kdump --enable --reserve-mb='auto'
+
+%end
+
+%anaconda
+pwpolicy root --minlen=6 --minquality=1 --notstrict --nochanges --notempty
+pwpolicy user --minlen=6 --minquality=1 --notstrict --nochanges --emptyok
+pwpolicy luks --minlen=6 --minquality=1 --notstrict --nochanges --notempty
+%end
+</code></pre><p>Start with these two in the home dir of root later</p>
+<p>Well, looking at that twreath as a username…tried tssh into that using the key, not working.</p>
+<p><a href="https://sludge.one/wreath"><img src="../../wreath/wreath03.png" alt="N|Solid"></a></p>
+<p><a href="https://sludge.one/wreath"><img src="../../wreath/wreath04.png" alt="N|Solid"></a></p>
+<p>We have root. We need to pivot. I cant find anything in the route table but this box does have a couple entries in the arp table. Need to figure out how to ssh into this. If I can ssh into this I can forward ports.</p>
+<p><a href="https://sludge.one/wreath"><img src="../../wreath/wreath05.png" alt="N|Solid"></a></p>
+<p><a href="https://sludge.one/wreath"><img src="../../wreath/wreath06.png" alt="N|Solid"></a></p>
+<p>Used getent and the uids</p>
+<p><a href="https://sludge.one/wreath"><img src="../../wreath/wreath07.png" alt="N|Solid"></a></p>
+<p>Checking netstat&hellip;..</p>
+<p><a href="https://sludge.one/wreath"><img src="../../wreath/wreath08.png" alt="N|Solid"></a></p>
+<p>The other 91s are…other students I think. That .150 looking awfully sexy though. I think if I change permissions on the key and try ssh as twreath and port forward my way to that system…</p>
+<p>Was fucking around, tried to just create a user and add to sudo and login…need a key…tried to gen one…nope. Trying with reverse key.. Its saying no, public key authentication. I need to figure out whats going on here. Maybe Ill go check the INE notes and see if something pops out in the labs or something</p>
+<p><a href="https://sludge.one/wreath"><img src="../../wreath/wreath09.png" alt="N|Solid"></a></p>
+<p><a href="https://sludge.one/wreath"><img src="../../wreath/wreath10.png" alt="N|Solid"></a></p>
+<p>Tried to gen my own from the private key. Need a passphrase…going to use john to try and crack the passhrase on the ssh key</p>
+<p><a href="https://sludge.one/wreath"><img src="../../wreath/wreath11.png" alt="N|Solid"></a></p>
+<p><a href="https://sludge.one/wreath"><img src="../../wreath/wreath12.png" alt="N|Solid"></a></p>
+<p>Got the hash, going to try it with darkweb 2017 top 1000 passwords…</p>
+<p><a href="https://sludge.one/wreath"><img src="../../wreath/wreath13.png" alt="N|Solid"></a></p>
+<p><a href="https://sludge.one/wreath"><img src="../../wreath/wreath14.png" alt="N|Solid"></a></p>
+<pre tabindex="0"><code>user --name=twreath --password=$6$0my5n311RD7EiK3J$zVFV3WAPCm/dBxzz0a7uDwbQenLohKiunjlDonkqx1huhjmFYZe0RmCPsHmW3OnWYwf8RWPdXAdbtYpkJCReg. --iscrypted --gecos=&quot;Thomas Wreath&quot;
+
+rootpw --iscrypted $6$i9vT8tk3SoXXxK2P$HDIAwho9FOdd4QCecIJKwAwwh8Hwl.BdsbMOUAd3X/chSCvrmpfy.5lrLgnRVNq6/6g0PxK9VqSdy47/qKXad1
+</code></pre><p>I need to dehash these and see what they can do for me</p>
+<p>Man, I don’t know what Im doing with this lol.</p>
+<p>Nc, exploit, webmin…nc, exploit, webmin…nc, exploit, webmin….</p>
+<p><a href="https://sludge.one/wreath"><img src="../../wreath/wreath15.png" alt="N|Solid"></a></p>
+<p>twreath:$6$0my5n311RD7EiK3J$zVFV3WAPCm/dBxzz0a7uDwbQenLohKiunjlDonkqx1huhjmFYZe0RmCPsHmW3OnWYwf8RWPdXAdbtYpkJCReg.::0:99999:7:::</p>
+<p>root:$6$p7Uhs/4PjCdnlyVM$iiDskHhs9a50ITRk1Bq/b6bxZenu8Vt9UqgxKapMvHBePwv21WQhHSQjGDOqZkLr4OXJ/3g9OWHZihIShi5oh.:19043:0:99999:7:::</p>
+<p>We&rsquo;re either using these fucking hashes or I&rsquo;m going to replace them with one of mine so we can ssh our way through to .150.</p>
+<p>The ending of these hashes is different.</p>
+<p><a href="https://sludge.one/wreath"><img src="../../wreath/wreath16.png" alt="N|Solid"></a></p>
+<p>Saw something to try unshadowing them Im going to cat the passwd file</p>
+<pre tabindex="0"><code>root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:65534:65534:Kernel Overflow User:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+systemd-coredump:x:999:997:systemd Core Dumper:/:/sbin/nologin
+systemd-resolve:x:193:193:systemd Resolver:/:/sbin/nologin
+tss:x:59:59:Account used by the trousers package to sandbox the tcsd daemon:/dev/null:/sbin/nologin
+polkitd:x:998:996:User for polkitd:/:/sbin/nologin
+libstoragemgmt:x:997:995:daemon account for libstoragemgmt:/var/run/lsm:/sbin/nologin
+cockpit-ws:x:996:993:User for cockpit web service:/nonexisting:/sbin/nologin
+cockpit-wsinstance:x:995:992:User for cockpit-ws instances:/nonexisting:/sbin/nologin
+sssd:x:994:990:User for sssd:/:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+chrony:x:993:989::/var/lib/chrony:/sbin/nologin
+rngd:x:992:988:Random Number Generator Daemon:/var/lib/rngd:/sbin/nologin
+twreath:x:1000:1000:Thomas Wreath:/home/twreath:/bin/bash
+unbound:x:991:987:Unbound DNS resolver:/etc/unbound:/sbin/nologin
+apache:x:48:48:Apache:/usr/share/httpd:/sbin/nologin
+nginx:x:990:986:Nginx web server:/var/lib/nginx:/sbin/nologin
+mysql:x:27:27:MySQL Server:/var/lib/mysql:/sbin/nologin
+deeznuts:x:1001:1001::/home/deeznuts:/bin/bash
+</code></pre><p>And the shadow file</p>
+<pre tabindex="0"><code>root:$6$p7Uhs/4PjCdnlyVM$iiDskHhs9a50ITRk1Bq/b6bxZenu8Vt9UqgxKapMvHBePwv21WQhHSQjGDOqZkLr4OXJ/3g9OWHZihIShi5oh.:19043:0:99999:7:::
+bin:*:18358:0:99999:7:::
+daemon:*:18358:0:99999:7:::
+adm:*:18358:0:99999:7:::
+lp:*:18358:0:99999:7:::
+sync:*:18358:0:99999:7:::
+shutdown:*:18358:0:99999:7:::
+halt:*:18358:0:99999:7:::
+mail:*:18358:0:99999:7:::
+operator:*:18358:0:99999:7:::
+games:*:18358:0:99999:7:::
+ftp:*:18358:0:99999:7:::
+nobody:*:18358:0:99999:7:::
+dbus:!!:18573::::::
+systemd-coredump:!!:18573::::::
+systemd-resolve:!!:18573::::::
+tss:!!:18573::::::
+polkitd:!!:18573::::::
+libstoragemgmt:!!:18573::::::
+cockpit-ws:!!:18573::::::
+cockpit-wsinstance:!!:18573::::::
+sssd:!!:18573::::::
+sshd:!!:18573::::::
+chrony:!!:18573::::::
+rngd:!!:18573::::::
+twreath:$6$0my5n311RD7EiK3J$zVFV3WAPCm/dBxzz0a7uDwbQenLohKiunjlDonkqx1huhjmFYZe0RmCPsHmW3OnWYwf8RWPdXAdbtYpkJCReg.::0:99999:7:::
+unbound:!!:18573::::::
+apache:!!:18573::::::
+nginx:!!:18573::::::
+mysql:!!:18573::::::
+deeznuts:!!:19043:0:99999:7:::
+</code></pre><p><a href="https://sludge.one/wreath"><img src="../../wreath/wreath17.png" alt="N|Solid"></a></p>
+<p><a href="https://sludge.one/wreath"><img src="../../wreath/wreath18.png" alt="N|Solid"></a></p>
+<p>I went back to the TryHackme room for a hint, after sinking a whole day into this. It won&rsquo;t give me the answer, and I won&rsquo;t have this hint on gameday, but just to make sure I&rsquo;m on track…get webmin pseudoshell, rev shell, stabilize shell… good point, I&rsquo;ll get a better shell when I go back…man, it looks like they&rsquo;re going with the root hash and the private key. Shit !</p>
+<p><a href="https://sludge.one/wreath"><img src="../../wreath/wreath19.png" alt="N|Solid"></a></p>
+<p>Could stand to read the banners once in a while, damn.</p>
+
+        </div>
+        <div class="post_extra mb-2">
+          
+<div class="copy" data-before="Share Story" data-after="Link Copied">
+  <svg class="icon">
+    <use xlink:href="#copy"></use>
+  </svg>
+</div>
+        </div>
+        <div>
+        
+        </div>
+      </div>
+    </div>
+    <a href="https://sludge.one/" class="post_nav"><span class="post_next">The Latest 
+      <svg class="icon icon_scale">
+        <use xlink:href="#double-arrow"></use>
+      </svg>
+    </span></a>
+  </div>
+
+    </main>
+    <footer class="footer wrap pale">
+  <p>&copy;&nbsp;<span class="year"></span>&nbsp;mellonaut</p>
+  <p class="attribution upcase">Designed by  <a href = '<no value>' target = '_blank' title = 'Linkedin Profile' rel = 'nonopener'><no value></a></p>
+</footer>
+
+
+<script src="https://sludge.one/js/index.min.4c267143e8a3510f2985dbce99f7612fae4605006c50b925325ea27d059bf1e87b9ec14835c52236bc9152e4858ade83bf3380784d5de2586bc1a76156a6fbc1.js"></script>
+
+    <svg width="0" height="0" class="hidden">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 699.428 699.428" id="copy">
+    <path d="M502.714 0H240.428C194.178 0 153 42.425 153 87.429l-25.267.59c-46.228 0-84.019 41.834-84.019 86.838V612c0 45.004 41.179 87.428 87.429 87.428H459c46.249 0 87.428-42.424 87.428-87.428h21.857c46.25 0 87.429-42.424 87.429-87.428v-349.19L502.714 0zM459 655.715H131.143c-22.95 0-43.714-21.441-43.714-43.715V174.857c0-22.272 18.688-42.993 41.638-42.993l23.933-.721v393.429C153 569.576 194.178 612 240.428 612h262.286c0 22.273-20.765 43.715-43.714 43.715zm153-131.143c0 22.271-20.765 43.713-43.715 43.713H240.428c-22.95 0-43.714-21.441-43.714-43.713V87.429c0-22.272 20.764-43.714 43.714-43.714H459c-.351 50.337 0 87.975 0 87.975 0 45.419 40.872 86.882 87.428 86.882H612v306zm-65.572-349.715c-23.277 0-43.714-42.293-43.714-64.981V44.348L612 174.857h-65.572zm-43.714 131.537H306c-12.065 0-21.857 9.77-21.857 21.835 0 12.065 9.792 21.835 21.857 21.835h196.714c12.065 0 21.857-9.771 21.857-21.835 0-12.065-9.792-21.835-21.857-21.835zm0 109.176H306c-12.065 0-21.857 9.77-21.857 21.834 0 12.066 9.792 21.836 21.857 21.836h196.714c12.065 0 21.857-9.77 21.857-21.836 0-12.064-9.792-21.834-21.857-21.834z"></path>
+  </symbol>
+  <symbol viewBox="0 0 53 42" xmlns="http://www.w3.org/2000/svg" id="double-arrow">
+    <path d="M.595 39.653a1.318 1.318 0 0 1 0-1.864L16.55 21.833a1.318 1.318 0 0 0 0-1.863L.595 4.014a1.318 1.318 0 0 1 0-1.863L2.125.62a1.318 1.318 0 0 1 1.864 0l19.35 19.349a1.318 1.318 0 0 1 0 1.863l-19.35 19.35a1.318 1.318 0 0 1-1.863 0zm29 0a1.318 1.318 0 0 1 0-1.864L45.55 21.833a1.318 1.318 0 0 0 0-1.863L29.595 4.014a1.318 1.318 0 0 1 0-1.863l1.53-1.53a1.318 1.318 0 0 1 1.864 0l19.35 19.349a1.318 1.318 0 0 1 0 1.863l-19.35 19.35a1.318 1.318 0 0 1-1.863 0z"></path>
+  </symbol>
+</svg>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ctf on mellonaut</title>
+    <link>https://sludge.one/categories/ctf/</link>
+    <description>Recent content in ctf on mellonaut</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Keep it grim.</copyright>
+    <lastBuildDate>Sat, 05 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sludge.one/categories/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Marketplace - XSS / SQLi Box</title>
+      <link>https://sludge.one/post/marketplace/</link>
+      <pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sludge.one/post/marketplace/</guid>
+      <description>&amp;ldquo;I&amp;rsquo;m in ya inbox, I got alllll the cookies&amp;hellip;&amp;quot; ✨Magic ✨ This was a good box, I feel like XSS is starting to click. Last time I was just staring at the alert like a talking dog.
+I ran Nmap with service and default scripts, found a /admin we can&amp;rsquo;t access, an up to date SSH port, and port 80 open as well as Node.js on a high port.</description>
+    </item>
+    
+  </channel>
+</rss>

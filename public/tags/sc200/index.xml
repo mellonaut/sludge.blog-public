@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sc200 on mellonaut</title>
+    <link>https://sludge.one/tags/sc200/</link>
+    <description>Recent content in sc200 on mellonaut</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Keep it grim.</copyright>
+    <lastBuildDate>Sat, 05 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sludge.one/tags/sc200/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SC200: Microsoft Security Operations Analyst - Part I</title>
+      <link>https://sludge.one/post/sc200/</link>
+      <pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sludge.one/post/sc200/</guid>
+      <description>&amp;ldquo;Defender for Autopilot&amp;rdquo; A proxmox VM prepped for Autopilot, brought into Azure, reset, enrolled new, then brought into Defender for Endpoint. 
+On the device itself I opened elevated powershell and ran:
+1 2Install-Script -Name Get-WindowsAutoPilotInfo 3Get-WindowsAutoPilotInfo.ps1 -Outputfile C:\hardwareinfo.csv 4 Update: Since doing this, I found a better snippet to use:
+1 2md c:\HWID 3Set-Location c:\HWID 4 5Set-ExecutionPolicy -Scope Process -ExecutionPolicy Unrestricted -Force 6 7Install-Script -Name Get-WindowsAutopilotInfo -Force 8 9$env:Path += &amp;#34;;C:\Program Files\WindowsPowerShell\Scripts&amp;#34; 10 11Get-WindowsAutopilotInfo.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>emoji on mellonaut</title>
+    <link>https://sludge.one/tags/emoji/</link>
+    <description>Recent content in emoji on mellonaut</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Keep it grim.</copyright>
+    <lastBuildDate>Thu, 20 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sludge.one/tags/emoji/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Me</title>
+      <link>https://sludge.one/post/aboutme/</link>
+      <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sludge.one/post/aboutme/</guid>
+      <description>Cloud Native? Cloud SAVAGE!</description>
+    </item>
+    
+  </channel>
+</rss>

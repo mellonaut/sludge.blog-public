@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+  <title>Serverless blog part i | mellonaut</title>
+  <meta charset='utf-8'>
+  <meta name="viewport" content ="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+  
+  
+<meta name="keywords" content="mellonaut">
+<meta property="og:locale" content='en_US'>
+<meta property="og:type" content="article">
+<meta property="og:title" content="Serverless Blog - Part I">
+<meta property="og:description" content="&ldquo;Day 1: Building the blog&hellip;&quot; Back to the basics https://pakstech.com/blog/blog-with-hugo/
+Chosed these two themes to play with">
+<meta property="og:url" content="https://sludge.one/post/s3blog/">
+<meta property="og:image" content="https://sludgeassets.s3.us-east-1.amazonaws.com/s3_blog/devswarm.png">
+<link rel="canonical" href="https://sludge.one/post/s3blog/">
+<link rel="apple-touch-icon" sizes="180x180" href='https://sludge.one/images/icons/apple-touch-icon.png'>
+<link rel="icon" type="image/png" sizes="32x32" href='https://sludge.one/images/icons/favicon-32x32.png'>
+<link rel="icon" type="image/png" sizes='16x16' href='https://sludge.one/images/icons/favicon-16x16.png'>
+<link rel="manifest" href='https://sludge.one/images/icons/site.webmanifest'>
+
+<link rel="stylesheet" href="https://sludge.one/css/styles.86c6da248e485cdc7f340baeb04c29cf0499e12a33a387104028f046c1d4ba15aa3ef8a4bf8f44a2fba7f0263053fa54dc4d2f2baa3d6c8ebb3c69f7bdbded2b.css" integrity="sha512-hsbaJI5IXNx/NAuusEwpzwSZ4Sozo4cQQCjwRsHUuhWqPvikv49Eovun8CYwU/pU3E0vK6o9bI67PGn3vb3tKw==">
+</head>
+
+  <body>
+    <div class="nav-drop">
+  <div class="nav-body">
+    <div class="nav-close"></div><div class="color_mode">
+<label for="mode">Toggle Dark Mode</label>
+<input type="checkbox" class="color_choice" id="mode">
+</div>
+
+  </div>
+</div>
+<header class="nav">
+  <nav class="nav-menu">
+    <a href="https://sludge.one/" class="nav-brand nav_item">mellonaut</a>
+    <div class="nav_bar-wrap">
+      <div class="nav_bar"></div>
+    </div>
+  </nav>
+</header>
+
+
+    <main>
+      
+  <div class="wrap mt post">
+    <div><p class="post_date">05. February 2022</p>
+      <h1 class="post_title">Serverless Blog - Part I</h1>
+      <div class="post_body">
+        <div class="post_inner">
+        
+          
+          
+          <img src="https://sludgeassets.s3.us-east-1.amazonaws.com/s3_blog/devswarm.png" alt="https://sludgeassets.s3.us-east-1.amazonaws.com/s3_blog/devswarm.png" class="post_thumbnail">
+        
+          <hr>
+<!-- raw HTML omitted -->
+<h2 id="_day-1-building-the-blog_"><em>&ldquo;Day 1: Building the blog&hellip;&quot;</em></h2>
+<p>Back to the basics <a href="https://pakstech.com/blog/blog-with-hugo/">https://pakstech.com/blog/blog-with-hugo/</a></p>
+<p>Chosed these two themes to play with 
+kc0bfv/ticky_tacky_dark: A multi-page Hugo theme, in dark colors, where the list page displays a set of image buttons linking to your sub-pages.</p>
+<p><a href="https://github.com/sharadcodes/hugo-theme-serial-programmer">https://github.com/sharadcodes/hugo-theme-serial-programmer</a> for backup</p>
+<p>Choco installed gimp so I can resize some images
+I have the theme, Im reading the themes specific instruction. Each theme has its own way it wants to do things. It looks like the header image serves out of the img folder like such:</p>
+<p>Example site:
+<a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog01.png" alt="N|Solid"></a>
+<a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog02.png" alt="N|Solid"></a>
+<a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog03.png" alt="N|Solid"></a></p>
+<p>Header images are, optimally, 950x200 pixels. Specify these in the site configuration as a list of image URLs with option images. One will be randomly selected on page load.</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog04.png" alt="N|Solid"></a>
+<a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog05.png" alt="N|Solid"></a>
+<a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog06.png" alt="N|Solid"></a>
+<a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog07.png" alt="N|Solid"></a></p>
+<p>Saved as project files and exported as well under &ldquo;header1&rdquo; &ldquo;header2&rdquo; right outside the actual project itself. Under OneDrive I have a Code workspace, a Blog folder, and these sitting right outside &ldquo;blog.folder&rdquo; on my dev machine.</p>
+<p>Cut my lil gothy wolf image into slices to be used for the header image pool. Hugos going to grab at random images from the folder that (I think) are tagged for headers. Some way or another, we&rsquo;ll get there though.</p>
+<p>Favicon, why not:</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog08.png" alt="N|Solid"></a></p>
+<p>Lets copy some files into the static directory and start adding them to our config.toml</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog09.png" alt="N|Solid"></a></p>
+<p>Started making buttons for navigation. 300x300 supposed to be but mine..well let&rsquo;s see. Next steps are figuring out how to do these sub pages and navigatew the, via these button images.</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog10.png" alt="N|Solid"></a></p>
+<p>The &mdash; need to be before and after your page set up. This is where you set your titles, weights, etc.</p>
+<p>Then we&rsquo;ll spin up Hugos awesome built in development server with &ldquo;hugo server -D', and note the pain that is YAML. You can see that the server wouldn&rsquo;t build. This is because I had a couple blank spaces and a linebreak after line 13 I didn&rsquo;t know was breaking the build. YAML is so touchy.</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog11.png" alt="N|Solid"></a></p>
+<p>The server will monitor chasnges made to files in the project directory and automagickally re-serve them:</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog12.png" alt="N|Solid"></a>
+<a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog13.png" alt="N|Solid"></a></p>
+<p>I want to lock that image as the main banner and have the other pages randomly pull from that img folder.  And those are some ugly ass buttons.</p>
+<p>As I create placeholder files for sections of the blog, the server is listening for changes saved to the filesystem. So when I ctrl+s in vs code, it appears, automagickally before our very eyes. I feel like the guy who looked at the Holy Grail in Raiders.</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog14.png" alt="N|Solid"></a>
+<a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog15.png" alt="N|Solid"></a></p>
+<h2 id="_day-2-we-should-probably-start-thinking-about-terraform_"><em>&ldquo;Day 2: We should probably start thinking about terraform&hellip;&quot;</em></h2>
+<p>Working on this serverless blog project. We may need a webhook. I wonder if we can just put this in a terraform workspace. We may be able to get around this webhook if it comes to it. Doesn’t it handle the “github action” triggering? Guess we’ll find out. Heres one thing working with cloud…
+This project I’m using for reference is 3 years old. Terraform has changed a lot since then. It’s telling me to put them in  the required providers block… we should investigate. I THINK I’ve only seen this done with required_providers block. I don’t think I even looked at Terraform 3 years ago. So this blog post will also be about breathing new life into aging cloud projects. Code rot they call it. Let’s do our part!</p>
+<p>Terraform Providers – Every resource in a terraform project (or “configuration”) must be associated to some Provider. Providers (or “Provider Configurations”) are GLOBAL to the entire Terraform project. They can be shared across multiple modules using, say, AWS. We define these in our “root module” (often main.tf, here I’m using root.tf just to illustrate).
+If a module is going to be used by further modules in the project, it must not contain any “provider” blocks. Child modules will inherit from the root module.</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog16.png" alt="N|Solid"></a></p>
+<p>The name given in the block header “google” is the “local name” of the provider. This should already have been declared in a required providers block. For example you may have…and this is from Hashi’s docs…</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog17.png" alt="N|Solid"></a></p>
+<p>I think this gives me an idea about our project. I think we need to put the cloudflare/cloudflare as a required provider up top. I wonder why it wasn’t necessary three years ago when this github project was finished, what changed it. So make a note, when we see that Cloudflare error again later we just need to definite it (and aws, and github) as required providers and set the plugins’ versions ther</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog18.png" alt="N|Solid"></a></p>
+<p>ANDDDDDDDDDDD:</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog19.png" alt="N|Solid"></a></p>
+<p>Guess we better run that.</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog20.png" alt="N|Solid"></a></p>
+<p>Let’s see if our cloudflare provider trouble is in that static site module. It is, and I’m not sure how to proceed. Remember we talked about inheriting providers? I think that’s what’s happening here. I think it’s trying to call an older hashicorp/cloudflare provider from this old module on github. Not sure where to go from here, except back into the Docs. I’m Going back, back basic, even basicer….
+<a href="https://learn.hashicorp.com/tutorials/terraform/cloudflare-static-website?in=terraform/aws">https://learn.hashicorp.com/tutorials/terraform/cloudflare-static-website?in=terraform/aws</a>
+Reduce the complexity, see it done a slightly different way. I don’t know how it works for everyone else, but my learning curve starts with compare, settles with contrast and maybe it’s something by the time I can do both for someone else. Have to see where it fizzles and breaks.</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog21.png" alt="N|Solid"></a>
+<a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog22.png" alt="N|Solid"></a>
+<a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog23.png" alt="N|Solid"></a>
+<a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog24.png" alt="N|Solid"></a></p>
+<p>Had a bucket with that name. It&rsquo;s a good idea to get in the habit of running terraform destroy –auto-approve to keep stuff like this from happening. I&rsquo;ll go home for the weekend and forget something test mode was still up.
+Got past that just to find&hellip;</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog25.png" alt="N|Solid"></a>
+<a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog26.png" alt="N|Solid"></a></p>
+<p>The struggle is real!</p>
+<p>Let&rsquo;s pivot over to the graphics for a bit and let the back-mind do it&rsquo;s thing.</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog27.png" alt="N|Solid"></a></p>
+<p>We need images of 300x150 for the small sidebar buttons inside the article. We need 300x500 for the big navigation buttons. We need 950x200 for the headers up top. Heres how I made some quick art for the site. Take some free art you like, I like to search google for creative commons licensed stuff I like by keywords. Put all those in a &lsquo;pictures&rsquo; folder and create a &lsquo;graphics&rsquo; one. We&rsquo;re going to create a template in GIMP at each of those sizes. Then..and this is janky..we&rsquo;re gonna paste in the photo we want to use. Now…lol. Take the image, move it under the templated area until you get a snapshot you like..let me see…</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog28.png" alt="N|Solid"></a>
+<a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog29.png" alt="N|Solid"></a>
+<a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog30.png" alt="N|Solid"></a></p>
+<p>Now you can export whatever is inside that frame to a jpg. I like to take &ldquo;circuit&rdquo; for example. Make a few header sized cuts, a few big button sized cuts, usually more small buttons just to have. If you take a handful of images that sort of thematically or colorwise work together you can make a bunch of art for your theme. Theres probably better ways this is just what I came with up over the weekened</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog31.png" alt="N|Solid"></a>
+<a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog32.png" alt="N|Solid"></a>
+<a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog33.png" alt="N|Solid"></a></p>
+<p>See? We got a little theme going. Later when I moved to another theme I realized many of them do something like this for you, or can. I did it the angelfire way.</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog34.png" alt="N|Solid"></a>
+<a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog35.png" alt="N|Solid"></a></p>
+<p>Kinda running two styles here but I hope I can mix them enough…one look for building, one for pentesting, for code, for music, etc. Headers randomly pull from an array of photos you define in the config.toml.</p>
+<h2 id="_day-3-back-on-the-blog_"><em>&ldquo;Day 3: Back on the Blog&hellip;&quot;</em></h2>
+<p>Started fresh and unfrustrated.  got it working, and broke it again, and wasn&rsquo;t even cool enough to document. Kinda wish I had, though. Www was broken because I was trying to use a subdomain like cloudmagick.sludge.one. Terraform was correctly putting the bucket as cloudmagick.sludge but cloudflare was still trying to redirect &ldquo;www&rdquo;. So we could only get to the root sludge.one if we came at it directly.</p>
+<p>This one may have been easy. Hugo renders everything down to a &ldquo;public&rdquo; folder. I copy the contents from that folder to &ldquo;website&rdquo; that the Tform script uses. I think I left the old and new versions together, probably a mess for Hugo to figure out. Cleared out &ldquo;website&rdquo; and dumped the contents of &ldquo;public&rdquo; in place.</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog36.png" alt="N|Solid"></a></p>
+<p>Now, I just destroyed and reapplied. Normally I would use:</p>
+<p>aws s3 cp website/ s3://$(terraform output -raw website_bucket_name)/ &ndash;recursive</p>
+<p>To copy that &ldquo;website&rdquo; folders contents up to the s3 created by terraform. This ain&rsquo;t best practice. I don&rsquo;t know if anyone would really suggest putting your website in the same folder as your terraform configuration, but we&rsquo;re just playing around (in production?). I want to see what it already did.</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog37.png" alt="N|Solid"></a></p>
+<p>Both empty.</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog38.png" alt="N|Solid"></a></p>
+<p>No juice on the link, but its up&hellip;</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog39.png" alt="N|Solid"></a></p>
+<p>S3&rsquo;ed the files to that bucket&hellip;</p>
+<p>Man we&rsquo;re good! Up and working. Let&rsquo;s see about getting some images on these pages.</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog40.png" alt="N|Solid"></a></p>
+<p>Man…I don&rsquo;t like our theme. It&rsquo;s a little too…tacky. GET IT. I think I will keep it for a music blog theme. It works great for album reviews. I want somewthing a little more in line with what I&rsquo;m doing.</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog41.png" alt="N|Solid"></a></p>
+<p>I ended up making an S3 bucket solely for graphics, public readable and use that to host the images and just link to them in the actual blog pages rather than deal with the paths inside the project folders. This means we can really easily use them for other stuff or move the project around with less trouble.</p>
+<p>Having trouble with the blog, my browsing returned a good thing that was bothering me before:</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog42.png" alt="N|Solid"></a></p>
+<p>This is why I moved to serving graphics in the s3 itself. For some reason…its not loading on the web.</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog43.png" alt="N|Solid"></a></p>
+<p>Because, the posts are relative to the root of your website.
+When you use Hugo with the option &ndash;server, as a server to create your files, Hugo considers the folder content as the root. It knows that if there’s files image into static/images, it must bind as-is.
+When you publish with hugo command, all datas are writed on public folder. This one becomes the root, within which folders posts, images and others are at the same level.</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog44.png" alt="N|Solid"></a></p>
+<p>Cool, that works, and that post was very helpful. We have a backup if S3 gets too weird.</p>
+<p>Had some thoughts about s3 and pricing…. Decided it would be best to store the images within the site itself for a number of reasons. Cost, complexity… down the line that may be the better way. This was easy to fix, though. My folder structure was the same <!-- raw HTML omitted -->:/s3_blog/<!-- raw HTML omitted --> now that S3 url will just be the static folder of the Hugo project. We put s3_blog folder in there, and we just use VS Code to change all occurences of the URL part to &ldquo;/&rdquo; since the paths…</p>
+<p><a href="https://sludge.one/s3blog"><img src="../../s3_blog/blog45.png" alt="N|Solid"></a></p>
+
+        </div>
+        <div class="post_extra mb-2">
+          
+<div class="copy" data-before="Share Story" data-after="Link Copied">
+  <svg class="icon">
+    <use xlink:href="#copy"></use>
+  </svg>
+</div>
+        </div>
+        <div>
+        
+        </div>
+      </div>
+    </div>
+    <a href="https://sludge.one/" class="post_nav"><span class="post_next">The Latest 
+      <svg class="icon icon_scale">
+        <use xlink:href="#double-arrow"></use>
+      </svg>
+    </span></a>
+  </div>
+
+    </main>
+    <footer class="footer wrap pale">
+  <p>&copy;&nbsp;<span class="year"></span>&nbsp;mellonaut</p>
+  <p class="attribution upcase">Designed by  <a href = '<no value>' target = '_blank' title = 'Linkedin Profile' rel = 'nonopener'><no value></a></p>
+</footer>
+
+
+<script src="https://sludge.one/js/index.min.4c267143e8a3510f2985dbce99f7612fae4605006c50b925325ea27d059bf1e87b9ec14835c52236bc9152e4858ade83bf3380784d5de2586bc1a76156a6fbc1.js"></script>
+
+    <svg width="0" height="0" class="hidden">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 699.428 699.428" id="copy">
+    <path d="M502.714 0H240.428C194.178 0 153 42.425 153 87.429l-25.267.59c-46.228 0-84.019 41.834-84.019 86.838V612c0 45.004 41.179 87.428 87.429 87.428H459c46.249 0 87.428-42.424 87.428-87.428h21.857c46.25 0 87.429-42.424 87.429-87.428v-349.19L502.714 0zM459 655.715H131.143c-22.95 0-43.714-21.441-43.714-43.715V174.857c0-22.272 18.688-42.993 41.638-42.993l23.933-.721v393.429C153 569.576 194.178 612 240.428 612h262.286c0 22.273-20.765 43.715-43.714 43.715zm153-131.143c0 22.271-20.765 43.713-43.715 43.713H240.428c-22.95 0-43.714-21.441-43.714-43.713V87.429c0-22.272 20.764-43.714 43.714-43.714H459c-.351 50.337 0 87.975 0 87.975 0 45.419 40.872 86.882 87.428 86.882H612v306zm-65.572-349.715c-23.277 0-43.714-42.293-43.714-64.981V44.348L612 174.857h-65.572zm-43.714 131.537H306c-12.065 0-21.857 9.77-21.857 21.835 0 12.065 9.792 21.835 21.857 21.835h196.714c12.065 0 21.857-9.771 21.857-21.835 0-12.065-9.792-21.835-21.857-21.835zm0 109.176H306c-12.065 0-21.857 9.77-21.857 21.834 0 12.066 9.792 21.836 21.857 21.836h196.714c12.065 0 21.857-9.77 21.857-21.836 0-12.064-9.792-21.834-21.857-21.834z"></path>
+  </symbol>
+  <symbol viewBox="0 0 53 42" xmlns="http://www.w3.org/2000/svg" id="double-arrow">
+    <path d="M.595 39.653a1.318 1.318 0 0 1 0-1.864L16.55 21.833a1.318 1.318 0 0 0 0-1.863L.595 4.014a1.318 1.318 0 0 1 0-1.863L2.125.62a1.318 1.318 0 0 1 1.864 0l19.35 19.349a1.318 1.318 0 0 1 0 1.863l-19.35 19.35a1.318 1.318 0 0 1-1.863 0zm29 0a1.318 1.318 0 0 1 0-1.864L45.55 21.833a1.318 1.318 0 0 0 0-1.863L29.595 4.014a1.318 1.318 0 0 1 0-1.863l1.53-1.53a1.318 1.318 0 0 1 1.864 0l19.35 19.349a1.318 1.318 0 0 1 0 1.863l-19.35 19.35a1.318 1.318 0 0 1-1.863 0z"></path>
+  </symbol>
+</svg>
+  </body>
+</html>

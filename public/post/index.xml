@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on mellonaut</title>
+    <link>https://sludge.one/post/</link>
+    <description>Recent content in Posts on mellonaut</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Keep it grim.</copyright>
+    <lastBuildDate>Sun, 20 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sludge.one/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloud Shaman</title>
+      <link>https://sludge.one/post/cloudshaman/</link>
+      <pubDate>Sat, 18 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sludge.one/post/cloudshaman/</guid>
+      <description>Summon your servers&amp;hellip; </description>
+    </item>
+    
+    <item>
+      <title>Serverless Blog - Part I</title>
+      <link>https://sludge.one/post/s3blog/</link>
+      <pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sludge.one/post/s3blog/</guid>
+      <description>&amp;ldquo;Day 1: Building the blog&amp;hellip;&amp;quot; Back to the basics https://pakstech.com/blog/blog-with-hugo/
+Chosed these two themes to play with kc0bfv/ticky_tacky_dark: A multi-page Hugo theme, in dark colors, where the list page displays a set of image buttons linking to your sub-pages.
+https://github.com/sharadcodes/hugo-theme-serial-programmer for backup
+Choco installed gimp so I can resize some images I have the theme, Im reading the themes specific instruction. Each theme has its own way it wants to do things.</description>
+    </item>
+    
+    <item>
+      <title>Wreath - Network</title>
+      <link>https://sludge.one/post/wreath/</link>
+      <pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sludge.one/post/wreath/</guid>
+      <description>Going after it again.
+Running Gobuster with the wildcard switch and raft-small-directories-lowercase.txt Running feroxbuster Noticed in the scan that Gobuster resolved the IP to thomaswreath.thm. going there now in firefox/burp
+Had to add the host name I found into the hosts file on windows. Wouldn’t work on linux, I thionk that Id need to directly VPN into the wreath net with the wsl distro itself to get the host name working there</description>
+    </item>
+    
+    <item>
+      <title>Kasm - A Workspace for the People</title>
+      <link>https://sludge.one/post/kasm/</link>
+      <pubDate>Sun, 20 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sludge.one/post/kasm/</guid>
+      <description>&amp;ldquo;Nah, you can&amp;rsquo;t install that.&amp;rdquo; Kasm is really cool. It’s based on Docker and allows you to to stream workspaces over the web like guacomole. You can manage users and groups, custom images, different types of authentication…it&amp;rsquo;s pretty robust.
+Let&amp;rsquo;s take a look at what it&amp;rsquo;s doing. In Portainer we can see it’s a distributed system of containers that reminds me of kubernetes.
+
+
+
+
+Let&amp;rsquo;s make ourselves an admin account.</description>
+    </item>
+    
+    <item>
+      <title>The Marketplace - XSS / SQLi Box</title>
+      <link>https://sludge.one/post/marketplace/</link>
+      <pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sludge.one/post/marketplace/</guid>
+      <description>&amp;ldquo;I&amp;rsquo;m in ya inbox, I got alllll the cookies&amp;hellip;&amp;quot; ✨Magic ✨ This was a good box, I feel like XSS is starting to click. Last time I was just staring at the alert like a talking dog.
+I ran Nmap with service and default scripts, found a /admin we can&amp;rsquo;t access, an up to date SSH port, and port 80 open as well as Node.js on a high port.</description>
+    </item>
+    
+    <item>
+      <title>Planet Remover - Terraform &amp; Ansible</title>
+      <link>https://sludge.one/post/planetremover/</link>
+      <pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sludge.one/post/planetremover/</guid>
+      <description> </description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>https://sludge.one/post/aboutme/</link>
+      <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sludge.one/post/aboutme/</guid>
+      <description>Cloud Native? Cloud SAVAGE!</description>
+    </item>
+    
+    <item>
+      <title>SC200: Microsoft Security Operations Analyst - Part I</title>
+      <link>https://sludge.one/post/sc200/</link>
+      <pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sludge.one/post/sc200/</guid>
+      <description>&amp;ldquo;Defender for Autopilot&amp;rdquo; A proxmox VM prepped for Autopilot, brought into Azure, reset, enrolled new, then brought into Defender for Endpoint. 
+On the device itself I opened elevated powershell and ran:
+1 2Install-Script -Name Get-WindowsAutoPilotInfo 3Get-WindowsAutoPilotInfo.ps1 -Outputfile C:\hardwareinfo.csv 4 Update: Since doing this, I found a better snippet to use:
+1 2md c:\HWID 3Set-Location c:\HWID 4 5Set-ExecutionPolicy -Scope Process -ExecutionPolicy Unrestricted -Force 6 7Install-Script -Name Get-WindowsAutopilotInfo -Force 8 9$env:Path += &amp;#34;;C:\Program Files\WindowsPowerShell\Scripts&amp;#34; 10 11Get-WindowsAutopilotInfo.</description>
+    </item>
+    
+    <item>
+      <title>scraps</title>
+      <link>https://sludge.one/post/scraps1/</link>
+      <pubDate>Thu, 18 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://sludge.one/post/scraps1/</guid>
+      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
+This document is a brief primer on using Go templates.</description>
+    </item>
+    
+    <item>
+      <title>Creating a New Theme</title>
+      <link>https://sludge.one/post/creating-a-new-theme/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sludge.one/post/creating-a-new-theme/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>(Hu)go Template Primer</title>
+      <link>https://sludge.one/post/scraps3/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sludge.one/post/scraps3/</guid>
+      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
+This document is a brief primer on using Go templates.</description>
+    </item>
+    
+    <item>
+      <title>SC200 - Defender for Autopilot</title>
+      <link>https://sludge.one/post/scraps2/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sludge.one/post/scraps2/</guid>
+      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
+Save it somewhere specific as we will be using it in the next step.
+More complete instructions are available at Install Hugo
+Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
+Follow the following steps:
+ Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+    </item>
+    
+    <item>
+      <title>Migrate to Hugo from Jekyll</title>
+      <link>https://sludge.one/post/migrate-from-jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://sludge.one/post/migrate-from-jekyll/</guid>
+      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+  </channel>
+</rss>

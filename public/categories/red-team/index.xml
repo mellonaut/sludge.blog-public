@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Red Team on mellonaut</title>
+    <link>https://sludge.one/categories/red-team/</link>
+    <description>Recent content in Red Team on mellonaut</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Keep it grim.</copyright>
+    <lastBuildDate>Sat, 05 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sludge.one/categories/red-team/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wreath - Network</title>
+      <link>https://sludge.one/post/wreath/</link>
+      <pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sludge.one/post/wreath/</guid>
+      <description>Going after it again.
+Running Gobuster with the wildcard switch and raft-small-directories-lowercase.txt Running feroxbuster Noticed in the scan that Gobuster resolved the IP to thomaswreath.thm. going there now in firefox/burp
+Had to add the host name I found into the hosts file on windows. Wouldn’t work on linux, I thionk that Id need to directly VPN into the wreath net with the wsl distro itself to get the host name working there</description>
+    </item>
+    
+  </channel>
+</rss>

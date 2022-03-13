@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>devops on mellonaut</title>
+    <link>https://sludge.one/categories/devops/</link>
+    <description>Recent content in devops on mellonaut</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Keep it grim.</copyright>
+    <lastBuildDate>Sun, 20 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sludge.one/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Serverless Blog - Part I</title>
+      <link>https://sludge.one/post/s3blog/</link>
+      <pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sludge.one/post/s3blog/</guid>
+      <description>&amp;ldquo;Day 1: Building the blog&amp;hellip;&amp;quot; Back to the basics https://pakstech.com/blog/blog-with-hugo/
+Chosed these two themes to play with kc0bfv/ticky_tacky_dark: A multi-page Hugo theme, in dark colors, where the list page displays a set of image buttons linking to your sub-pages.
+https://github.com/sharadcodes/hugo-theme-serial-programmer for backup
+Choco installed gimp so I can resize some images I have the theme, Im reading the themes specific instruction. Each theme has its own way it wants to do things.</description>
+    </item>
+    
+    <item>
+      <title>Kasm - A Workspace for the People</title>
+      <link>https://sludge.one/post/kasm/</link>
+      <pubDate>Sun, 20 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sludge.one/post/kasm/</guid>
+      <description>&amp;ldquo;Nah, you can&amp;rsquo;t install that.&amp;rdquo; Kasm is really cool. It’s based on Docker and allows you to to stream workspaces over the web like guacomole. You can manage users and groups, custom images, different types of authentication…it&amp;rsquo;s pretty robust.
+Let&amp;rsquo;s take a look at what it&amp;rsquo;s doing. In Portainer we can see it’s a distributed system of containers that reminds me of kubernetes.
+
+
+
+
+Let&amp;rsquo;s make ourselves an admin account.</description>
+    </item>
+    
+    <item>
+      <title>Planet Remover - Terraform &amp; Ansible</title>
+      <link>https://sludge.one/post/planetremover/</link>
+      <pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sludge.one/post/planetremover/</guid>
+      <description> </description>
+    </item>
+    
+  </channel>
+</rss>
